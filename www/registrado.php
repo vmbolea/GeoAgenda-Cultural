@@ -22,9 +22,6 @@ include "conexion.php"; // incluye el archivo de conexion
 
     move_uploaded_file($ftempimagen,"imagenes/$fimagen"); //mover archivo (imagen) al directorio del servidor donde se almacenan
 
-
-
-
     $sql = "INSERT INTO evento( tipo_evento, geom_evento, nombre_evento, organizador_evento, descripcion_evento, inicio_evento, final_evento, precio_evento, aforo_evento, imagen_evento, url_evento)
     VALUES ($ftipo, ST_GeomFromText('POINT($flongitud $flatitud)', 4326), '$fnombre', '$forganizador', '$fdescripcion', '$finicio' , $ffinal , $fprecio, $faforo, '$fimagen', '$furl')"; // creación de consulta
 
@@ -47,8 +44,8 @@ else
 
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-        <!-- enlace a los estilos css -->
-        <link href="estilos/style.css" rel="stylesheet" type="text/css" />
+        <!-- enlace a los estilos de entrada de datos css -->
+        <link href="estilos/style_in.css" rel="stylesheet" type="text/css" />
 
           <title>Evento registrado</title>
     </head>
@@ -147,18 +144,20 @@ else
   </tr>
   <tr>
     <td>Imagen: </td>
-    <td><?php // consulta para obtener la imagen del evento
-        include "conexion.php";
+    <td><?php include "conexion.php";
         // Echo out a sample image
-        if ($_FILES['imagen']['name'] == null ) { // si esta vacío devolver texto
+
+        if ($_FILES['imagen']['name'] == null ) {
           echo "Sin imagen";
-        }else { // si esta lleno devoler la referencia con el nombre que esta en el directorio de imagenes
-          $fimagen = $_FILES['imagen']['name'];$image = "imagenes/$fimagen "; 
-        $imageData = base64_encode(file_get_contents($image)); // Leer el directorio de la imagen y convertirla base 64
-        $src = 'data: '.mime_content_type($image).';base64,'.$imageData; // Formato de la imagen SRC: data:{mime};base64,{data};
+        }else {
+          $fimagen = $_FILES['imagen']['name']; // variable de archivo de imagen y nombre
+          $image = "imagenes/$fimagen"; // variable de directorio de la imagen
+        $imageData = base64_encode(file_get_contents($image)); // variable leer directorio y convertirlo a codificación base64
+        // Format the image SRC:  data:{mime};base64,{data};
+        $src = 'data: '.mime_content_type($image).';base64,'.$imageData; // variable formateada mime y base64
         
         echo '<a href="'.$image.'" ><img src="' . $src . '"  display: "block"
-        margin-left: "auto" margin-right: "auto" width: "50%" / ></a>'; // formato de despliegue de la imagen
+        margin-left: "auto" margin-right: "auto" width: "50%" / ></a>'; // Devuelve la referencia de la imagen y la variable SRC con la imagen formateada y convertida
       }
         ?></td>
   </tr>

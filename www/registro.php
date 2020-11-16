@@ -9,8 +9,8 @@
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/> -->
 
-        <!-- enlace a los estilos css -->
-        <link href="estilos/style.css" rel="stylesheet" type="text/css" />
+        <!-- enlace a los estilos de entrada de datos css -->
+        <link href="estilos/style_in.css" rel="stylesheet" type="text/css" />
         
         <!-- Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a> -->       
 
