@@ -4,8 +4,8 @@
         "host='postgres'    
         port='5432'
         dbname='eventos'
-        user='vmbolea'
-        password=unizar@geo2020";
+        user='xxxxxxx'
+        password=xxxxxxx";
 
     $conn=pg_connect($cadena) // Función de conexión
     
