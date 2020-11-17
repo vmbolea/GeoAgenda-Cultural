@@ -10,4 +10,6 @@ En la carpeta `www` están los archivos correspondientes al desarrollo web de la
 
 En la carpeta `Docker` están los archivos para desplegar los servicios necesarios para hacer correr la herramienta.
 
+![](https://raw.githubusercontent.com/vmbolea/GeoAgenda-Cultural/main/images/captura_web.png)
+
 RELLENAR!!
