@@ -1,0 +1,67 @@
+# compositor de docker para servicios del TFM VMBolea
+# actualizado a 21 de octubre de 2020
+
+# para correr todos los servicios lanzar este comando: `docker-compose up -d`
+# para parar los servicios de este compositor: `docker-compose down`
+# para correr solo un servicio (e.g. postgres): `docker-compose up -d postgres`
+
+# recuerda que los archivos de los volúmenes estarán con privilegios de root
+
+# combinación por defecto de contraseñas: admin/secret
+
+version: '3.7'
+
+services:
+    
+    # Postgres + PostGIS - Servidor de bases de datos con extensión espacial
+    
+    postgres:
+        #image: postgis/postgis:11-2.5		# versión usada por vmbolea
+        image: postgis/postgis:13-3.0           # imagen con vessión más actualizada
+        #container_name: tfm_postgis
+        restart: always
+        environment:
+            POSTGRES_DB: postgres
+            POSTGRES_USER: admin
+            POSTGRES_PASSWORD: XXXXXXXX       # esta contraseña queda en el volumen (ciudado si cambia)
+            PGDATA: /var/lib/postgresql/data
+        volumes:
+            # por ahora lo pongo en el temporal
+            - ./data-postgres:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
+
+
+    # Apache 2 + php 7.4 - Servidor de páginas web
+    
+    apache:
+        #image: php:7.4-apache              # la imagen no tiene la extensión para postgres
+        build:                              # por ello hay que usar un dockerfile que la incluya
+            context: ./
+            dockerfile: ./php_pg.dockerfile
+        #container_name: tfm_apache
+        restart: always
+        volumes:
+            # indicar dónde están los archivos web (read only)
+            - ../www:/var/www/html:ro
+        ports:
+            - "80:80"
+        depends_on:         # servicios de los que depende
+            - postgres
+    
+    # Geoserver - Servidor de datos geográficos
+    
+    geoserver:
+        image: oscarfonts/geoserver:2.17.2           # imagen modificada por Oscar Fonts
+        #image: geonode/geoserver:2.17.2             # imagen oficial
+        #container_name: tfm_geoserver
+        restart: always
+        volumes:
+            # por ahora lo pongo en el temporal            
+            - ./data-geoserver-data:/var/local/geoserver
+        ports:
+            #- "8888:8080"  # se podría cambiar el puerto a uno diferente para configurarlo desde servidor
+            - "8080:8080"
+        depends_on:         # servicios de los que depende
+            - apache
+            - postgres
