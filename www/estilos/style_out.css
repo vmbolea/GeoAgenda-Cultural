@@ -1,0 +1,91 @@
+/* Estilos de salida de datos */
+
+
+html, body, #container {
+height: 100%;
+width: 100%;
+overflow: hidden;
+}
+  body > .container-fluid {
+		  padding: 50px 0px 0;
+  }
+  #mapid {
+display: block;
+width: auto;
+height: 100%;
+}
+.boxradio{
+width:15px;
+height:15px;
+border-radius:25px;
+display: inline-block;
+}
+
+.todas{
+background:rgb(255, 255, 255);
+border: 2px solid #000;
+
+} 
+.artistico{
+background:rgba(179, 11, 67, .4);
+border: 2px solid rgba(179, 11, 67);
+}
+.DEPORTES{
+background:rgba(33, 52, 196, .4);
+border: 2px solid rgba(33, 52, 196);
+}
+.formativo{
+background:rgba(158, 186, 32, .4);
+border: 2px solid rgba(158, 186, 32);
+}
+.medioambiental{
+background:rgba(17, 214, 30, .4);
+border: 2px solid rgba(17, 214, 30);
+}
+.revindicativo{
+
+background:rgba(224, 34, 34, .4);
+border: 2px solid rgba(224, 34, 34);
+}
+h1,h2,h3 {
+padding: 0px;
+margin: 1px;
+}
+/* css to customize Leaflet default styles  */
+.custom-popup {
+border-radius: 2px;
+color: #504e4e;
+font-family: 'Molengo', sans-serif;
+font-size: 12px;
+line-height: 10px;
+height: 10 px ;
+max-height: 300px;
+}
+
+.custom-popup, .leaflet-popup-tip {
+background: #e7e7e7;
+border: none;
+box-shadow: none;
+}
+
+.leaflet-popup-content-wrapper {
+background: #e7e7e7;
+border-radius: 2px;
+}
+
+.leaflet-popup {
+position: absolute;
+text-align: center;
+}
+
+.leaflet-popup-content {
+margin-top: 20px;
+margin-right: 2px;
+padding-right: 12px;
+min-width: 100 px !important;
+max-height: 500px;
+overflow: auto;
+}
+
+
+
