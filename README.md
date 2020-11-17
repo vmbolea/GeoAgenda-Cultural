@@ -1,6 +1,6 @@
 # GeoAgenda-Cultural
 
-![](https://libregeo.unizar.es/vmbolea/js/images/logo.svg)
+![](https://raw.githubusercontent.com/vmbolea/GeoAgenda-Cultural/main/images/logo_geoagendacultural.png)
 
 Este repositorio es parte del **Trabajo de Final del Máster** del de Víctor Matínez Bolea presentado en noviembre de 2020 en el [Máster Universitario en Tecnologías de la Información Geográfica para la Ordenación del Territorio: Sistemas de Información Geográfica y Teledetecciónde](https://estudios.unizar.es/estudio/ver?id=608) del [departamento de Geografía y Ordenación del Territorio de la Univeridad de Zaragoza](https://geografía.unizar.es).
 
