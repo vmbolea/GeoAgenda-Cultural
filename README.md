@@ -12,7 +12,7 @@ En el presente repositorio podrás encontrar los archivos de la herramienta que 
 
 En la carpeta `www` están los archivos correspondientes al desarrollo web de la herramienta.
 
-En la carpeta `Docker` están los archivos para desplegar los servicios necesarios para hacer correr la herramienta.
+En la carpeta `docker` están los archivos para desplegar los servicios necesarios para hacer correr la herramienta.
 
 En la carpeta `db` está el archivo para la construcción de la base de datos.
 
