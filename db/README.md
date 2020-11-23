@@ -7,7 +7,7 @@ La construcción y el diseño de la base de datos es realizada con PostgreSQL. L
 La tabla `evento` será alimentada con información tanto espacial como temática generada por el denominado insumidor voluntariamente. Por lo tanto, cuenta con otros campos que son de texto, numéricos o temporales para almacenar la información temática. Estos campos pueden ser 
 - obligatorios: `tipo_evento`, `nombre_evento`, `organizador_evento`, `descripcion_evento`, `inicio_evento` y `final_evento`,
 - no obligatorios: `precio_evento`, `aforo_evento`, `imagen_evento` y `url_evento`
-- o inherentes a la consulta: `id_evento` y registro_evento
+- o inherentes a la consulta: `id_evento` y `registro_evento`
 
 Las tablas auxiliares definen las categorías y los tipos de evento configurados en la plataforma. A partir de `id_tipo` se alimenta el campo con referencia foránea de la tabla principal `tipo_evento`. Esta preconfiguración se define en base a la observación de la disposición de otras bases de datos sobre eventos culturales. 
 
