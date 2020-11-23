@@ -21,7 +21,7 @@ El software *HTTP Apache* es elegido para realizar las funciones de servidor web
 Tabla: Lenguajes, librerías y extensiones de la plataforma
 
 | Lenguaje | Tipo de lenguaje | Librería/Extensión | Función |
-| -- | -- | -- | -- |-- |
+| -- | -- | -- | -- |
 | [PHP](https://github.com/Leaflet/Leaflet.heat) | Lado servidor |   | Conexión y consulta a base de datos |
 | |  |  [pgsql](https://www.php.net/manual/en/ref.pdo-pgsql.php) | Permite la conexión a una base de datos PostgreSQL |
 | [XML](https://developer.mozilla.org/es/docs/Web/XML) | Lado cliente/servidor |   | Transferencia de datos | 
@@ -309,7 +309,11 @@ La gestión se realiza en la propia interfaz de la aplicación creando un espaci
 
 ## Visualización de los datos 
 
-En esta sección se describen las aplicaciones y lenguajes que participan en la visualización de información de la plataforma. Existen dos páginas con visores que diferenciaremos con los nombres de principal e histórico y que han sido diseñadas con una plantilla [*Bootstrap*](https://getbootstrap.com/) basada en [*HTML*](https://developer.mozilla.org/es/docs/Web/HTML) y [*CSS*](https://developer.mozilla.org/es/docs/Web/CSS).  A su vez, ambas páginas, despliegan la información mediante varias peticiones asíncronas al servidor geográfico mediante la función [`$.getJSON()`](https://api.jquery.com/jquery.getjson/) de *jquery* que incluye una *url* previamente definida... 
+En esta sección se describen las aplicaciones y lenguajes que participan en la visualización de información de la plataforma. Existen dos páginas con visores que diferenciaremos con los nombres de principal e histórico y que han sido diseñadas con una plantilla [*Bootstrap*](https://getbootstrap.com/) basada en [*HTML*](https://developer.mozilla.org/es/docs/Web/HTML) y [*CSS*](https://developer.mozilla.org/es/docs/Web/CSS). 
+
+![Esquema general de la plataforma](images/esquema_3.JPG)
+
+ A su vez, ambas páginas, despliegan la información mediante varias peticiones asíncronas al servidor geográfico mediante la función [`$.getJSON()`](https://api.jquery.com/jquery.getjson/) de *jquery* que incluye una *url* previamente definida... 
 
 ```js
 // definición de la url sobre la que se realizan las peticiones
@@ -627,12 +631,18 @@ El mismo proceso sobre las mismas variables se realiza para los polígonos cread
 ```
 Aunque matemáticamente el planteamiento es correcto los polígonos no son colindantes.
 
-
-
-
-
-
+#### Mapa de densidad
 
 El último de los análisis propuestos está basado en un mapa de calor que representa a partir de una capa de puntos, la densidad de los mismos en un área determinada. Para ello se hace uso de la extensión *Leaflet.heat* de *Leaflet* que con la clase `L.heatLayer` permite la representación de un mapa de calor.
 
+```js
+// llamada para cargar los datos mediante una solicitud GET HTTP a la url de capa evento definida más arriba.        
+        $.getJSON(URL_evento,function(e){  // función de llamada 
+          var locations = e.features.map(function(e) { // definición de variable con función
+          var location = e.geometry.coordinates.reverse(); // las geometrías
+          location.push(3); // impulsadas
+          return location; // devuelve el valor a location
+          }); // se cierra la definición de la variable con función
+        // definición de la clase heat layer definitiva
 
+```
