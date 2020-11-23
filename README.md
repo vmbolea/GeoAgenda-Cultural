@@ -28,4 +28,4 @@ GeoAgenda-Cultural está montada en uno de los servidores de la [Asociación de 
 
 Para acceder a la página de esta herramienta se puede hacer a través de esta URL: [https://libregeo.unizar.es/geoagenda](https://libregeo.unizar.es/geoagenda) 
 
-*(A fecha 23/11/2020 el acceso no es posible debido a el estado del servidor físico.)*
+**(A fecha 23/11/2020 el acceso no es posible debido a el estado del servidor físico.)**
