@@ -1,18 +1,15 @@
-# Lenguajes, librerías y extensiones
+# Librerías y plantillas
 
-Tabla: Lenguajes, librerías y extensiones de la plataforma
+Tabla: Librerías y plantillas
 
-| Lenguaje | Tipo de lenguaje | Librería/Extensión | Función |
-| -- | -- | -- | -- |
-| [PHP](https://github.com/Leaflet/Leaflet.heat) | Lado servidor |   | Conexión y consulta a base de datos |
-| |  |  [pgsql](https://www.php.net/manual/en/ref.pdo-pgsql.php) | Permite la conexión a una base de datos PostgreSQL |
-| [XML](https://developer.mozilla.org/es/docs/Web/XML) | Lado cliente/servidor |   | Transferencia de datos | 
-| [GeoJSON](https://geojson.org/) | Lado cliente/servidor |  | Visualización y transferencia de datos |
-| [HTML](https://developer.mozilla.org/es/docs/Web/HTML) | Lado cliente |   | Desarrollo de página web | 
-| [CSS](https://developer.mozilla.org/es/docs/Web/CSS) | Lado cliente |   | Diseño de página web | 
-|  |  | [Bootstrap](https://getbootstrap.com/) | Contiene plantillas basadas en *HTML* Y *CSS* |  
+| Lenguaje | Librería/plantilla | Función |
+| -- | -- | -- |
+| [HTML](https://developer.mozilla.org/es/docs/Web/HTML) |   | Desarrollo de página web | 
+| [CSS](https://developer.mozilla.org/es/docs/Web/CSS) |   | Diseño de página web | 
+|  |  [Bootstrap](https://getbootstrap.com/) | Contiene plantillas basadas en *HTML* Y *CSS* |  
 | [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) | Lado cliente |   | Implementación funciones complejas|
-| |  | [jQuery](www.jquery.com)  | Funciones asíncronas con la técnica AJAX |
-| |  | [Turf](www.turfjs.org)  | Análisis espacial |
-| |  | [Leaflet](https://leafletjs.com/)  | Representación de mapas interactivos |
-| |  | [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat) | Representación de mapas de calor |
+| |   [jQuery](www.jquery.com)  | Funciones asíncronas con la técnica AJAX |
+| |   [Turf](www.turfjs.org)  | Análisis espacial |
+| |   [Leaflet](https://leafletjs.com/)  | Representación de mapas interactivos |
+| |  [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat) | Representación de mapas de calor |
+| |  [Leaflet-control-window](https://github.com/mapshakers/leaflet-control-window) | Ventana emergente |
