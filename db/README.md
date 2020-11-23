@@ -2,7 +2,7 @@
 
 La construcción y el diseño de la base de datos es realizada con PostgreSQL. La base de datos esta compuesta por cinco tablas de las que tres tienen un campo con información espacial, a saber: `conexion`, `filtro` y `evento`. El modelo de datos es vectorial de puntos y el sistema de referencia de coordenadas configurado es EPSG:4326. Además, la tabla `evento` incluye dos tablas auxiliares que codifican las categorías y tipos de eventos disponibles.
 
-![Esquema de la BD](images/esquema_bd.png)
+![Esquema de la BD](images/diagrama_bd.png)
 
 La tabla `evento` será alimentada con información tanto espacial como temática generada por el denominado insumidor voluntariamente. Por lo tanto, cuenta con otros campos que son de texto, numéricos o temporales para almacenar la información temática. Estos campos pueden ser 
 - obligatorios: `tipo_evento`, `nombre_evento`, `organizador_evento`, `descripcion_evento`, `inicio_evento` y `final_evento`,
