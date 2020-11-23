@@ -26,4 +26,4 @@ Imagen de la página principal de la herramienta:
 
 GeoAgenda-Cultural está montada en uno de los servidores de la [Asociación de Usuarios de Software Libre de la Universidad de Zaragoza (Pulsar)](https://www.pulsar.unizar.es/), en concreto dentro del [proyecto "LibreGEO"](https://libregeo.unizar.es/) que coordina el mismo director del TFM: Miguel Sevilla-Callejo.
 
-Para acceder a la página de esta herramienta se puede hacer a través de esta URL: [https://libregeo.unizar.es/geoagenda](https://libregeo.unizar.es/geoagenda)
+Para acceder a la página de esta herramienta se puede hacer a través de esta URL: [https://libregeo.unizar.es/geoagenda](https://libregeo.unizar.es/geoagenda) (A fecha 23/11/2020 el acceso no es posible porque [proyecto "LibreGEO"](https://libregeo.unizar.es/) se encuentra caido)
